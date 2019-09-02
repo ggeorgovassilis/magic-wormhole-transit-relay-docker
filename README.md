@@ -4,9 +4,16 @@ The [wormhole transit relay](https://github.com/warner/magic-wormhole-transit-re
 
 ## Building
 
-> sudo docker build -t magic-wormhole-transit-relay-docker .
+`sudo docker build -t magic-wormhole-transit-relay-docker .`
 
 ## Running
 
-> sudo docker run magic-wormhole-transit-relay-docker
+`sudo docker run magic-wormhole-transit-relay-docker`
 
+The relay server is exposed at TCP port 4001.
+
+## Using
+
+`wormhole --transit-helper "tcp:localhost:4001" send Dockerfile`
+
+Replace "localhost" with whatever server name the relay is running on.
